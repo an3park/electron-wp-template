@@ -14,7 +14,7 @@ module.exports = {
     path: path.resolve(__dirname, 'renderer')
   },
   devServer: {
-    port: 3030,
+    port: +process.env.PORT || 3030,
     hot: isDev
   },
   plugins: [new HTMLWebpackPlugin()]

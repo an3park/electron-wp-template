@@ -14,9 +14,10 @@ for (const type of ['electron', 'node', 'chrome']) {
 
 text += '<hr>'
 
-const ss = remote.getGlobal('$')().join('<br>')
+const {ls} = remote.getGlobal('$')
 
-console.log(ss)
-text += `<div>${ss}</div>`
+const lss = ls().join('<br>')
+
+text += `<div>${lss}</div>`
 
 document.body.innerHTML = text + '</h3></div>'
