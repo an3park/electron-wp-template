@@ -16,7 +16,8 @@ function createWindow() {
     width: 800,
     height: 600,
     webPreferences: {
-      nodeIntegration: true
+      nodeIntegration: true,
+      enableRemoteModule: true
     }
   })
 
@@ -26,7 +27,7 @@ function createWindow() {
     mainWindow.loadURL('http://127.0.0.1:' + PORT)
     mainWindow.webContents.openDevTools()
   } else {
-    mainWindow.loadFile('renderer/index.html')
+    mainWindow.loadFile('./build/renderer/index.html')
   }
 }
 

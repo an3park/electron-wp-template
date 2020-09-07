@@ -7,11 +7,11 @@ const isProd = !isDev
 module.exports = {
   mode: isDev ? 'development' : 'production',
   target: 'electron-renderer',
-  context: path.resolve(__dirname, 'renderer_src'),
+  context: path.resolve(__dirname, 'src', 'renderer'),
   entry: './index.js',
   output: {
     filename: 'bundle.js',
-    path: path.resolve(__dirname, 'renderer')
+    path: path.resolve(__dirname, 'build', 'renderer')
   },
   devServer: {
     port: +process.env.PORT || 3030,
